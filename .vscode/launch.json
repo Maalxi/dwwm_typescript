@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrom against localhost",
+      "url": "file:///home/samuel/Bureau/dev/dwwm_typescript/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
