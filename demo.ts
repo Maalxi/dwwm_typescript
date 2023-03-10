@@ -285,3 +285,5 @@ console.log("Fruits avec une date de péremption de moins de deux jours :", expi
 console.log("Fruits avec une date de péremption entre trois jours et une semaine :", expiringWithinAWeekFruits);
 console.log("Fruits avec une date de péremption de plus d'une semaine :", expiringInMoreThanAWeekFruits);
 
+
+
