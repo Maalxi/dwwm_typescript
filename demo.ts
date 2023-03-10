@@ -196,3 +196,91 @@ const persons: personne[] = [
 for (let i = 0; i < persons.length; i++) {
   console.log(`Bonjour, mon nom est ${persons[i].name} ${persons[i].surname}, j'ai ${persons[i].age} ans.`);
 }
+
+
+
+
+// Quatrième partie
+
+// Exercice # 1
+
+// Interface pour définir le type des objets du tableau students
+interface Etudiant {
+  nom: string;
+  age: number;
+  majeur: boolean;
+}
+
+// Tableau contenant les objets étudiants
+const etudiants: Etudiant[] = [
+{
+    nom: 'Paul',
+    age: 19,
+    majeur: true
+},
+{
+    nom: 'Julie',
+    age: 16,
+    majeur: false
+},
+{
+    nom: 'Jacques',
+    age: 49,
+    majeur: true
+},
+{
+    nom: 'Marie',
+    age: 12,
+    majeur: false
+}
+];
+
+// Filtrer les étudiants majeurs dans un nouveau tableau
+const etudiantsMajeurs: Etudiant[] = etudiants.filter((etudiant: Etudiant) => etudiant.majeur);
+
+// Filtrer les étudiants non-majeurs dans un nouveau tableau
+const etudiantsMineurs: Etudiant[] = etudiants.filter((etudiant: Etudiant) => !etudiant.majeur);
+
+// Calculer la moyenne d'âge de tous les étudiants
+const ageMoyen: number = etudiants.reduce((sommeAge: number, etudiant: Etudiant) => sommeAge + etudiant.age, 0) / etudiants.length;
+
+// Afficher les tableaux d'étudiants et l'âge moyen
+console.log("Liste de tous les étudiants : ", etudiants);
+console.log("Liste des étudiants majeurs : ", etudiantsMajeurs);
+console.log("Liste des étudiants mineurs : ", etudiantsMineurs);
+console.log("Âge moyen de tous les étudiants : ", ageMoyen);
+
+
+// Exercice # 2
+
+interface Fruit {
+  name: string;
+  expirationInDays: number;
+}
+
+const fruits: Fruit[] = [
+  {
+    name: 'Pomme',
+    expirationInDays: 1
+  },
+  {
+    name: 'Poire',
+    expirationInDays: 16
+  },
+  {
+    name: 'Citron',
+    expirationInDays: 5
+  },
+  {
+    name: 'Tomate',
+    expirationInDays: 4
+  }
+];
+
+const expiringSoonFruits: Fruit[] = fruits.filter(fruit => fruit.expirationInDays < 2);
+const expiringWithinAWeekFruits: Fruit[] = fruits.filter(fruit => fruit.expirationInDays >= 2 && fruit.expirationInDays <= 7);
+const expiringInMoreThanAWeekFruits: Fruit[] = fruits.filter(fruit => fruit.expirationInDays > 7);
+
+console.log("Fruits avec une date de péremption de moins de deux jours :", expiringSoonFruits);
+console.log("Fruits avec une date de péremption entre trois jours et une semaine :", expiringWithinAWeekFruits);
+console.log("Fruits avec une date de péremption de plus d'une semaine :", expiringInMoreThanAWeekFruits);

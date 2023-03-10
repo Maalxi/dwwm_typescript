@@ -254,6 +254,66 @@ var persons = [{
 for (var i = 0; i < persons.length; i++) {
   console.log("Bonjour, mon nom est ".concat(persons[i].name, " ").concat(persons[i].surname, ", j'ai ").concat(persons[i].age, " ans."));
 }
+// Tableau contenant les objets étudiants
+var etudiants = [{
+  nom: 'Paul',
+  age: 19,
+  majeur: true
+}, {
+  nom: 'Julie',
+  age: 16,
+  majeur: false
+}, {
+  nom: 'Jacques',
+  age: 49,
+  majeur: true
+}, {
+  nom: 'Marie',
+  age: 12,
+  majeur: false
+}];
+// Filtrer les étudiants majeurs dans un nouveau tableau
+var etudiantsMajeurs = etudiants.filter(function (etudiant) {
+  return etudiant.majeur;
+});
+// Filtrer les étudiants non-majeurs dans un nouveau tableau
+var etudiantsMineurs = etudiants.filter(function (etudiant) {
+  return !etudiant.majeur;
+});
+// Calculer la moyenne d'âge de tous les étudiants
+var ageMoyen = etudiants.reduce(function (sommeAge, etudiant) {
+  return sommeAge + etudiant.age;
+}, 0) / etudiants.length;
+// Afficher les tableaux d'étudiants et l'âge moyen
+console.log("Liste de tous les étudiants : ", etudiants);
+console.log("Liste des étudiants majeurs : ", etudiantsMajeurs);
+console.log("Liste des étudiants mineurs : ", etudiantsMineurs);
+console.log("Âge moyen de tous les étudiants : ", ageMoyen);
+var fruits = [{
+  name: 'Pomme',
+  expirationInDays: 1
+}, {
+  name: 'Poire',
+  expirationInDays: 16
+}, {
+  name: 'Citron',
+  expirationInDays: 5
+}, {
+  name: 'Tomate',
+  expirationInDays: 4
+}];
+var expiringSoonFruits = fruits.filter(function (fruit) {
+  return fruit.expirationInDays < 2;
+});
+var expiringWithinAWeekFruits = fruits.filter(function (fruit) {
+  return fruit.expirationInDays >= 2 && fruit.expirationInDays <= 7;
+});
+var expiringInMoreThanAWeekFruits = fruits.filter(function (fruit) {
+  return fruit.expirationInDays > 7;
+});
+console.log("Fruits avec une date de péremption de moins de deux jours :", expiringSoonFruits);
+console.log("Fruits avec une date de péremption entre trois jours et une semaine :", expiringWithinAWeekFruits);
+console.log("Fruits avec une date de péremption de plus d'une semaine :", expiringInMoreThanAWeekFruits);
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -279,7 +339,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35025" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36251" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
