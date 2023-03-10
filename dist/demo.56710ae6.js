@@ -214,7 +214,6 @@ for (var i = 0; i < numbers.length; i++) {
   results.push(numbers[i] * 180);
 }
 console.log(results);
-// Exercice # 4
 var person = {
   name: 'Marchal',
   surname: 'Mickeal',
@@ -225,35 +224,35 @@ if (person.age >= 18) {
 }
 // Exercice # 5
 var person = {
-  nom: 'Dupont',
-  prénom: 'Jean',
+  name: 'Dupont',
+  surname: 'Jean',
   age: 42
 };
-console.log("Bonjour, mon nom est ".concat(person.nom, " ").concat(person.prénom, ", j'ai ").concat(person.age, " ans."));
+console.log("Bonjour, mon nom est ".concat(person.name, " ").concat(person.surname, ", j'ai ").concat(person.age, " ans."));
 // Exercice # 6
 var persons = [{
-  nom: 'Dupont',
-  prénom: 'Jean',
+  name: 'Dupont',
+  surname: 'Jean',
   age: 42
 }, {
-  nom: 'Martin',
-  prénom: 'Lucie',
+  name: 'Martin',
+  surname: 'Lucie',
   age: 28
 }, {
-  nom: 'Girard',
-  prénom: 'Pierre',
+  name: 'Girard',
+  surname: 'Pierre',
   age: 35
 }, {
-  nom: 'Lefevre',
-  prénom: 'Sophie',
+  name: 'Lefevre',
+  surname: 'Sophie',
   age: 20
 }, {
-  nom: 'Robert',
-  prénom: 'Julien',
+  name: 'Robert',
+  surname: 'Julien',
   age: 50
 }];
 for (var i = 0; i < persons.length; i++) {
-  console.log("Bonjour, mon nom est ".concat(persons[i].nom, " ").concat(persons[i].prénom, ", j'ai ").concat(persons[i].age, " ans."));
+  console.log("Bonjour, mon nom est ".concat(persons[i].name, " ").concat(persons[i].surname, ", j'ai ").concat(persons[i].age, " ans."));
 }
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -280,7 +279,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38957" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35025" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -155,7 +155,13 @@ console.log(results);
 
 // Exercice # 4
 
-const person = {
+interface personne {
+  name: string,
+  surname: string,
+  age: number
+}
+
+const person: personne = {
   name: 'Marchal',
   surname: 'Mickeal',
   age: 19
@@ -168,25 +174,25 @@ if (person.age >= 18) {
 
 // Exercice # 5
 
-const person = {
-  nom: 'Dupont',
-  prénom: 'Jean',
+const person : personne = {
+  name: 'Dupont',
+  surname: 'Jean',
   age: 42
 };
 
-console.log(`Bonjour, mon nom est ${person.nom} ${person.prénom}, j'ai ${person.age} ans.`);
+console.log(`Bonjour, mon nom est ${person.name} ${person.surname}, j'ai ${person.age} ans.`);
 
 
 // Exercice # 6
 
-const persons = [
-  { nom: 'Dupont', prénom: 'Jean', age: 42 },
-  { nom: 'Martin', prénom: 'Lucie', age: 28 },
-  { nom: 'Girard', prénom: 'Pierre', age: 35 },
-  { nom: 'Lefevre', prénom: 'Sophie', age: 20 },
-  { nom: 'Robert', prénom: 'Julien', age: 50 }
+const persons: personne[] = [
+  { name: 'Dupont', surname: 'Jean', age: 42 },
+  { name: 'Martin', surname: 'Lucie', age: 28 },
+  { name: 'Girard', surname: 'Pierre', age: 35 },
+  { name: 'Lefevre', surname: 'Sophie', age: 20 },
+  { name: 'Robert', surname: 'Julien', age: 50 }
 ];
 
 for (let i = 0; i < persons.length; i++) {
-  console.log(`Bonjour, mon nom est ${persons[i].nom} ${persons[i].prénom}, j'ai ${persons[i].age} ans.`);
+  console.log(`Bonjour, mon nom est ${persons[i].name} ${persons[i].surname}, j'ai ${persons[i].age} ans.`);
 }
